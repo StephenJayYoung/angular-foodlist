@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+    <link href="css/main.css" rel="stylesheet" />
+    <script src="js/vendor/angular.min.js"></script>
+  </head>
+  <body ng-app="foodlog">
+    <div class="header">
+      <div class="container text-center" style="margin-bottom: 15px">
+        <h1>Angular Foodlist</h1>
+      </div>
+    </div>
+
+    <div class="main" ng-controller="MainController">
+      <div class="container">
+
+        
+        <div ng-repeat="foods in food">
+          <div class="exercise-icon col-lg-3">
+          <img ng-src="{{foods.icon}}">
+          <button="exercise-name text-center" ng-click="foods.details()">{{foods.info}}</button>
+        </div>
+            
+<!--           <div class="col-lg-3">
+            <p class="exercise-name">{{foods.info}}</p>
+          </div> -->
+          
+<!--           <div class="col-xs-4 counters">
+            <span class="decrease" ng-click="decrease($index)">-</span><span class="count"> {{foods.count}}  </span><span class="increase" ng-click="increase($index)">+</span>
+          </div> -->
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+      </div>
+    </div>
+    
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+
+  </body>
+</html>
